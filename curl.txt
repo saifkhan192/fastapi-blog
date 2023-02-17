@@ -1,0 +1,25 @@
+curl --location --request POST 'http://127.0.0.1:8001/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "saif",
+    "email": "saif@test.com",
+    "password": "1234"
+}'
+
+
+http://127.0.0.1:8001/users/
+
+
+http://127.0.0.1:8001/users/1
+
+curl --location --request POST 'http://127.0.0.1:8001/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "saif@test.com",
+    "password": "1234"
+}'
+
+
+curl --location --request POST 'http://127.0.0.1:8001/auth/login' \
+--form 'username="saif@test.com"' \
+--form 'password="1234"'
